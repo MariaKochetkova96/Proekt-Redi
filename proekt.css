@@ -1,29 +1,56 @@
-.cv{
+.cv {
+    display: flex;
     margin: 20px;
-    width: 500px;
-    height: 900px;
-    background-color: rgb(220, 243, 243);
-}
-.profession {
-    color: midnightblue;
-margin-bottom: 20px;
+    width: 550px;
+    height: 800px;
+    background-color: rgb(182, 235, 235);
 }
 
-.column_left {
-    width: 30%;
-    background-color: bisque;
+
+.profession {
+    color: #953c1ac7;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
-.column_right {
+
+.column-left {
+    width: 35%;
+    background-color:#fdcf99db;
+}
+
+.column-right {
     width: 70%;
-    background-color: olive ;
+    background-color:rgba(248, 245, 240, 0.952);
 }
+
 h3 {
-text-transform: uppercase;
-padding-bottom: 5px;
-font-size: 1em;
-margin-top: 0.5em;
-margin-bottom: 0.5em;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 20px; 
 }
-.titel{
+
+.contact {
+    padding-left: 1px; 
+}
+
+.selected {
+    padding-left: 1px; 
+}
+
+
+.titel {
     font-weight: bold;
+    margin-left: 10px;
 }
+
+.name {
+    margin-left: 10px;
+}
+
+.description {
+    margin-left: 10px; 
+}
+
