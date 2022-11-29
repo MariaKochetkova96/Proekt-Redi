@@ -1,0 +1,29 @@
+.cv{
+    margin: 20px;
+    width: 500px;
+    height: 900px;
+    background-color: rgb(220, 243, 243);
+}
+.profession {
+    color: midnightblue;
+margin-bottom: 20px;
+}
+
+.column_left {
+    width: 30%;
+    background-color: bisque;
+}
+.column_right {
+    width: 70%;
+    background-color: olive ;
+}
+h3 {
+text-transform: uppercase;
+padding-bottom: 5px;
+font-size: 1em;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
+.titel{
+    font-weight: bold;
+}
