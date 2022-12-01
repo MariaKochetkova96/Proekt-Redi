@@ -8,45 +8,48 @@
     <body>
         <div class="cv">
             <div class="column-left"> 
-                <img src="cv_foto.jpg" alt="profile_foto" width="183px" height="200px">
-                <h3>Kontakt</h3>
-                <ul>
-                    <li class="contact" id="email"> email: natalia.otto@gmx.de</li>
-                    <li class="contact" id="tel-number"> Tel.number: 01795223329</li>
-                    <li class="contact" id="address"> address: Musterstr. 7, 65231 Berlin</li>
-                </ul>
-                <h3>Languages:</h3>
-                <ul>
-                    <li class="selected"> Ukrainian </li>
-                    <li class="selected"> English</li>
-                    <li class="selected"> German </li>
-                </ul>
-                <h3>Skill's: </h3>
-                <ul>
-                    <li> skill 1  </li>
-                    <li> skill 2  </li>
-                    <li> skill 3  </li>
-                </ul>
+                <img class="portrait" src="cv_foto.jpg" alt="profile_photo">
+                <div class="content">
+                    <h3 class="section-heading">Kontakt</h3>
+                    <ul>
+                        <li class="list-item" id="email">email: natalia.otto@gemix.de</li>
+                        <li class="list-item" id="tel-number">Tel.number: 01795223329</li>
+                        <li class="list-item" id="address">address: Musterstr. 7, 65231 Berlin</li>
+                    </ul>
+                    <h3 class="section-heading">Languages:</h3>
+                    <ul>
+                        <li class="list-item">Ukrainian</li>
+                        <li class="list-item">English</li>
+                        <li class="list-item">German</li>
+                    </ul>
+                    <h3 class="section-heading">Skill's:</h3>
+                    <ul>
+                        <li class="list-item">skill 1</li>
+                        <li class="list-item">skill 2</li>
+                        <li class="list-item">skill 3</li>
+                    </ul>
+                </div>
             </div>
             <div class="column-right"> 
                 <h1 class="name">Nataliia Otto </h1>
-                <h3 class="profession">Finance Manager</h3>
+                <h3 class="section-heading profession" id="profession">Finance Manager</h3>
                 <div class="description">
                     <p> 7 years of professional experience as an Finance Manager in construction companies.
                     Confident work in common office applications such as Word, Excel etc., computer skills.
                     Work in accounting programs.
                     Stress resistance, quick familiarization, creativity, have organizational skills.</p>
                     <div class="education"> 
-                        <h3>Education:</h3>
-                        <div class="date">2011 - 2015 </div>
+                        <h3 class="section-heading">Education:</h3>
+                        <div class="date">2011 - 2015</div>
                         <div class="info">  
                             <p> Brown University. Bachelor of Aris in Finance</p>
                         </div>
                     </div>    
-                    <div class="experience"> <h3>Work Experience:</h3>
+                    <div class="experience"> 
+                        <h3 class="section-heading">Work Experience:</h3>
                         <div class="date"> 03.2018 - 11.2022</div>
                          <div class="info"> 
-                            <p class="titel">"A&G" Finance Manager </p> 
+                            <p class="titel" id="place">"A&G" Finance Manager</p> 
                             <p> Examined ab hoc initiatives, financial analyses, 
                             and presentations for top management and the Board of Directors.
                             Advice to company management.Planning of personnel deployment.</p>
@@ -55,7 +58,7 @@
 
                         <div class="date">10.2015 - 02.2018</div>
                         <div class="info">
-                            <p class="titel">"PoSayDon" Assistant Finance Manager</p>
+                            <p class="titel"id="place">"PoSayDon" Assistant Finance Manager</p>
                             <p>Responsible for managing the day to day financial reporting and accounting processes.
                             Optimize financial plans and business processes. Controlling processes in accounting.</p> 
                     </div>
@@ -63,6 +66,49 @@
             </div>
 
         </div>
+        <div>
+            <form id="anketa"> 
+                <h1>User CV</h1>
+                <div class="group">
+                    <label for="" required>Your photo-portrait:</label>
+                    <input type="image">
+                <div class="group">
+                    <label for="" required>E-mail:</label>
+                    <input type="email">
+                </div>
+                <div class="group">
+                    <label for="">Your phone number:</label>
+                    <input type="tel" id ="tel-number">
+                </div>
+                <div class="group">
+                    <label for="" required>Your address:</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="group">
+                    <label for="" required>I speak the following languages:</label>
+                    <input type="text">
+                    <ul>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <label for="" required>My skill's:</label>
+                    <textarea name="text" id="skills" cols="40" rows="10">
+                </textarea>
+                </div>
+                
+                    <input type="submit"/>
+        
+            
+                </form>
+        </div>
+
+        <script src="anketa.js"> </script>
     </body>
     </html>
 
