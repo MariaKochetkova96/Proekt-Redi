@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UF-8">
         <title>Anketa CV</title>
         <link rel="stylesheet" href="proekt.css">
     </head>
+    <p class="headline">You don't know where to start your CV? We will help you.</p>
     <body>
         <div class="cv">
             <div class="column-left"> 
@@ -12,103 +13,167 @@
                 <div class="content">
                     <h3 class="section-heading">Kontakt</h3>
                     <ul>
-                        <li class="list-item" id="email">email: natalia.otto@gemix.de</li>
-                        <li class="list-item" id="tel-number">Tel.number: 01795223329</li>
-                        <li class="list-item" id="address">address: Musterstr. 7, 65231 Berlin</li>
+                        <li class="list-item">
+                            email: <span id="cv-email">natalia.otto@gemix.de</span>
+                        </li>
+                        <li class="list-item">
+                            Tel.number: <span id="cv-tel-number">01795223329</span>
+                        </li>
+                        <li class="list-item">
+                            address: <span id="cv-address">Musterstr. 7, 65231 Berlin</span>
+                        </li>
                     </ul>
                     <h3 class="section-heading">Languages:</h3>
-                    <ul>
-                        <li class="list-item">Ukrainian</li>
-                        <li class="list-item">English</li>
-                        <li class="list-item">German</li>
-                    </ul>
+                    <ul id="cv-language-list"></ul>
                     <h3 class="section-heading">Skill's:</h3>
-                    <ul>
-                        <li class="list-item">skill 1</li>
-                        <li class="list-item">skill 2</li>
-                        <li class="list-item">skill 3</li>
-                    </ul>
+                    <ul id="cv-skill-list"></ul>
                 </div>
             </div>
             <div class="column-right"> 
-                <h1 class="name">Nataliia Otto </h1>
-                <h3 class="section-heading profession" id="profession">Finance Manager</h3>
+                <h1 class="name" id="cv-name">Nataliia Otto </h1>
+                <h3 class="section-heading profession" id="cv-profession">Finance Manager</h3>
                 <div class="description">
-                    <p> 7 years of professional experience as an Finance Manager in construction companies.
+                    <p id="cv-self-info"> 7 years of professional experience as an Finance Manager in construction companies.
                     Confident work in common office applications such as Word, Excel etc., computer skills.
                     Work in accounting programs.
                     Stress resistance, quick familiarization, creativity, have organizational skills.</p>
                     <div class="education"> 
                         <h3 class="section-heading">Education:</h3>
-                        <div class="date">2011 - 2015</div>
-                        <div class="info">  
+                        <ul id="cv-education-list">
+                        <div class="date" id="cv-period">2011 - 2015</div>
+                        <div class="info" id="cv-education-info">  
                             <p> Brown University. Bachelor of Aris in Finance</p>
+                        </ul>
                         </div>
                     </div>    
                     <div class="experience"> 
                         <h3 class="section-heading">Work Experience:</h3>
                         <div class="date"> 03.2018 - 11.2022</div>
                          <div class="info"> 
-                            <p class="titel" id="place">"A&G" Finance Manager</p> 
-                            <p> Examined ab hoc initiatives, financial analyses, 
+                            <p class="titel" id="titel">"A&G" Finance Manager</p> 
+                            <p id=""> Examined ab hoc initiatives, financial analyses, 
                             and presentations for top management and the Board of Directors.
                             Advice to company management.Planning of personnel deployment.</p>
                         </div>
                     </div>
-
                         <div class="date">10.2015 - 02.2018</div>
                         <div class="info">
-                            <p class="titel"id="place">"PoSayDon" Assistant Finance Manager</p>
+                            <p class="titel" id="place-2">"PoSayDon" Assistant Finance Manager</p>
                             <p>Responsible for managing the day to day financial reporting and accounting processes.
                             Optimize financial plans and business processes. Controlling processes in accounting.</p> 
                     </div>
                  </div>
-            </div>
-
+            </div>  
         </div>
+    <p class="headline">Just fill in the fields below.</p>      
         <div>
-            <form id="anketa"> 
-                <h1>User CV</h1>
-                <div class="group">
-                    <label for="" required>Your photo-portrait:</label>
-                    <input type="image">
-                <div class="group">
-                    <label for="" required>E-mail:</label>
-                    <input type="email">
-                </div>
-                <div class="group">
-                    <label for="">Your phone number:</label>
-                    <input type="tel" id ="tel-number">
-                </div>
-                <div class="group">
-                    <label for="" required>Your address:</label>
-                    <input type="text" id="address">
-                </div>
-                <div class="group">
-                    <label for="" required>I speak the following languages:</label>
-                    <input type="text">
-                    <ul>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                    </ul>
-                </div>
-                <div class="group">
-                    <label for="" required>My skill's:</label>
-                    <textarea name="text" id="skills" cols="40" rows="10">
-                </textarea>
-                </div>
+            <h1>User CV</h1>
+            <form id="details-form">
+                <fieldset>
+                    <div class="group">
+                        <label for="portrait" required>Your photo-portrait:</label>
+                        <input type="file" id="form-portrait">
+                    <div class="group">
+                        <label for="form-email" required>E-mail:</label>
+                        <input type="email" id="form-email">
+                    </div>
+                    <div class="group">
+                        <label for="form-tel-number" required>Your phone number:</label>
+                        <input type="tel" id="form-tel-number">
+                    </div>
+                    <div class="group">
+                        <label for="form-address" required>Your address:</label>
+                        <input type="text" id="form-address">
+                    </div>
+                    <div class="group">
+                        <label for="form-name" required>Your name and surname:</label>
+                        <input type="text" id="form-name">
+                    </div>
+                    <div class="group">
+                        <label for="form-profession" required>Your profession:</label>
+                        <input type="text" id="form-profession">
+                    </div>
+                    <input type="submit">
+                </fieldset>
+            </form>
+            <form id="languages-form">
+                <fieldset>
+                    <label for="form-languages">
+                        I speak the following languages:  
+                    </label>
+                    <input type="text" id="form-languages">
+                    <input type="submit">
+                </fieldset>
+            </form>
+            <form id="skills-form">
+                <fieldset>
+                    <label for="form-skills">
+                        I have the following skills:  
+                    </label>
+                    <input type="text" id="form-skills">
+                    <input type="submit">
+                </fieldset>
+            </form>
+            <form id="self-info-form">
+                <fieldset>
+                    <div class="group">
+                        <label for="form-self-info" required>About yourself and professional activity:</label>
+                        <textarea name="text" id="form-self-info"></textarea>
+                    </div>
+                    <input type="submit">
+                </fieldset>
+            </form>
+            <form id="education-form">
+                <fieldset>
+                    <div class="group">
+                        <label for="form-period">inpup period: </label>
+                        <input type="text" id="form-period">
+                    </div>
+                    <div>  
+                        <label for="form-education">inpup educational institution:</label>
+                        <textarea name="text" id="form-education"></textarea>
+                        <input type="submit">
+                    </div>
+                </fieldset>
+            </form>
+            <form action="#" method="post" enctype="multipart/form-data" id="anketa"> 
                 
-                    <input type="submit"/>
-        
-            
+                
+               
+                <p>Your education:</p><br>
+                <div class="group">
+                    <label for="" required>Enter time period:</label>
+                    <input type="text" class="date"> (give date in format “MM.YYYY”)
+                </div>
+                <div class="group">
+                    <label for="" required>Enter educational institution:</label>
+                    <textarea name="text" class="education"></textarea> 
+                </div>
+                <p>Your jobs:</p><br>
+                <div class="group">
+                    <label for="" required>Enter time period:</label>
+                    <input type="text" class="date"> (give date in format “MM.YYYY”)
+                </div>
+                <p id="position">Enter company name end position</p>
+                <div class="group">
+                    <label for="" required>a description of your duties:</label>
+                    <textarea name="text" class="duties"></textarea> 
+                </div>
+                <div class="group">
+                    <label for="" required>Enter time period:</label>
+                    <input type="text" class="date"> (date?)
+                </div>
+                <p id="position">Enter company name end position</p>
+                <div class="group">
+                    <label for="" required>a description of your duties:</label>
+                    <textarea name="text" class="duties"></textarea> 
+                </div>
+                    <button onclick>Preview</button>
+                    <button onclick ="geneatePDF">Save PDF</button>
                 </form>
         </div>
 
-        <script src="anketa.js"> </script>
+        <script src="proekt.js"> </script>
     </body>
     </html>
 

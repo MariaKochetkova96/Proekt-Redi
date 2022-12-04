@@ -57,3 +57,12 @@ li {
 .list-item {
     overflow-wrap: break-word;
 }
+
+.headline {
+    font-size: 20px;
+}
+
+textarea {
+    width: 500px;
+    height: 100px;
+}
