@@ -49,7 +49,7 @@
                         <h3 class="section-heading">Work Experience:</h3>
                         <ul id="cv-work-list"></ul>
                         <div class="date" id="cv-work-period-placeholder"> 03.2018 - 11.2022</div>
-                         <div class="info"> 
+                         <div class="work-info"> 
                             <p class="titel" id="cv-work-titel-placeholder">"A&G" Finance Manager</p> 
                             <p id="cv-work-info-placeholder"> Examined ab hoc initiatives, financial analyses, 
                             and presentations for top management and the Board of Directors.
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                         <div class="date"id="cv-work-period-placeholder">10.2015 - 02.2018</div>
-                        <div class="info"id="cv-work-info-placeholder">
+                        <div class="work-info"id="cv-work-info-placeholder">
                             <p class="titel" id="cv-work-titel-placeholder">"PoSayDon" Assistant Finance Manager</p>
                             <p id="cv-work-info-placeholder">Responsible for managing the day to day financial reporting and accounting processes.
                             Optimize financial plans and business processes. Controlling processes in accounting.</p> 
@@ -68,11 +68,14 @@
     <p class="headline">Just fill in the fields below.</p>      
         <div>
             <h1>User CV</h1>
-            <form id="details-form">
+            <form id="details-form"  method="post" enctype="multipart/form-data">
                 <fieldset>
                     <div class="group">
                         <label for="portrait" required>Your photo-portrait:</label>
-                        <input type="file" id="form-portrait">
+                        <input type="file" id="form-portrait" name="your portrait"
+                               accept="image/png, image/jpeg">
+                        <button>Submit</button>          
+                    </div>           
                     <div class="group">
                         <label for="form-email" required>E-mail:</label>
                         <input type="email" id="form-email">
@@ -118,7 +121,7 @@
                 <fieldset>
                     <div class="group">
                         <label for="form-self-info" required>About yourself and professional activity:</label>
-                        <textarea name="text" id="form-self-info"></textarea>
+                        <textarea name="text" class="info" id="form-self-info"></textarea>
                     </div>
                     <input type="submit">
                 </fieldset>
@@ -131,7 +134,7 @@
                     </div>
                     <div>  
                         <label for="form-education">input educational institution:</label>
-                        <textarea name="text" id="form-education"></textarea>
+                        <textarea name="text" class="info" id="form-education"></textarea>
                         <input type="submit">
                     </div>  
                 </fieldset>
@@ -144,7 +147,7 @@
                     </div>
                     <div>  
                         <label for="form-work-titel">input company name end position:</label>
-                        <textarea name="text" id="form-work-titel"></textarea>
+                        <textarea name="text" class="info" id="form-work-titel"></textarea>
                     </div> 
                     <div>  
                         <label for="form-work-info">input description of your duties:</label>
