@@ -135,11 +135,27 @@ function handleWorkSubmit(e) {
 var workForm = document.querySelector("#work-form")
 
 workForm.addEventListener("submit", e => handleWorkSubmit(e))
+ 
 
-//function generatePDF() {
- //   const element = document.getElementById('#anketa);
-   // proekt.html()
-     //   .from(element)
-       // .save();
-//} innerhtml
+function updateCvPortrait(portrait) {
+  var cvPortrait = document.querySelector("#cv-portrait-placeholder").remove()
+  cvPortrait.innerHTML = `${portrait}`
+}
+
+function handlePortrait(e) {
+  e.preventDefault()
+  var portrait = document.querySelector("#form-portrait").value
+  updateCvPortrait(portrait)
+ } 
+    
+var portrait = document.querySelector("#form-portrait")
+
+portrait.addEventListener("submit", e => handlePortrait(e))
+
+window.jsPDF = window.jsPDF.jsPDF;
+
+function generatePDF() {
+  var proekt = new jsPDF()
+  proekt.save("proekt.pdf")
+} 
 

@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="proekt.css">
     </head>
     <p class="headline">You don't know where to start your CV? We will help you.</p>
-    <body>
+    <body class="body">
         <div class="cv">
             <div class="column-left"> 
-                <img class="portrait" src="cv_foto.jpg" alt="profile_photo">
+                <img class="portrait" id="cv-portrait" src="cv_foto.jpg" alt="profile_photo">
                 <div class="content">
                     <h3 class="section-heading">Kontakt</h3>
                     <ul>
@@ -69,9 +69,9 @@
         <div>
             <h1>User CV</h1>
             <form id="details-form"  method="post" enctype="multipart/form-data">
-                <fieldset>
+                <fieldset>       
                     <div class="group">
-                        <label for="portrait" required>Your photo-portrait:</label>
+                        <label for="form-portrait" required>Your photo-portrait:</label>
                         <input type="file" id="form-portrait" name="your portrait"
                                accept="image/png, image/jpeg">
                         <button>Submit</button>          

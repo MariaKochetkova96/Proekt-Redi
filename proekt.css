@@ -1,3 +1,7 @@
+.body {
+    background-image: url("../Proekt-Redi/fon.jpeg");
+}
+
 .cv {
     display: flex;
     margin: 20px;
@@ -8,7 +12,7 @@
 
 .column-left {
     width: 35%;
-    background-color:#fdcf99db;
+    background-color:#E6E6FA;
 }
 
 .column-right {
@@ -27,7 +31,7 @@
 }
 
 .profession {
-    color: brown;
+    color: rgb(20, 36, 129);
 
 }
 
