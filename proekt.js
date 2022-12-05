@@ -82,16 +82,17 @@ selfInfoForm.addEventListener("submit", e => handleSelfInfoSubmit(e))
 
 
 function updateCvEducation(period, education) {
-  var cveducationList = document.querySelector("#cv-education-list")
+  document.querySelector("#cv-period-placeholder").remove()
+  document.querySelector("#cv-period-placeholder").remove()
+  var cvEducationList = document.querySelector("#cv-education-list")
   var listItem = document.createElement("li")
   listItem.innerHTML = `
-    <div class="date" id="cv-period>:${period}
-    <div class="info" id="cv-education-info">:${education}
-    </div>
+    <div class="date" id="cv-period">${period}</div>
+    <div class="info" id="cv-education-info">  
+        <p>${education}</p>
     </div>
       `
   cvEducationList.append(listItem)
-  var list = document.querySelector('#user-list')
 }
 
 function handleEducationSubmit(e) {
@@ -104,6 +105,36 @@ function handleEducationSubmit(e) {
 var educationForm = document.querySelector("#education-form")
 
 educationForm.addEventListener("submit", e => handleEducationSubmit(e))
+
+
+function updateCvEducation(period, titel, work) {
+  document.querySelector("#cv-work-period-placeholder").remove()
+  document.querySelector("#cv-work-titel-placeholder").remove()
+  document.querySelector("#cv-work-info-placeholder").remove()
+
+  var cvWorkList = document.querySelector("#cv-work-list")
+  var listItem = document.createElement("li")
+  listItem.innerHTML = `
+  <div class="date" id="cv-work-period">${period} </div>
+  <div class="info"> 
+     <p class="titel" id="cv-work-titel">${titel}</p> 
+     <p id="cv-work-info">${work}</p>
+  </div>
+      `
+  cvWorkList.append(listItem)
+}
+
+function handleWorkSubmit(e) {
+  e.preventDefault()
+  var period = document.querySelector("#form-period-work").value
+  var titel = document.querySelector("#form-work-titel").value
+  var work = document.querySelector("#form-work-info").value
+  updateCvEducation(period, titel, work)
+}
+
+var workForm = document.querySelector("#work-form")
+
+workForm.addEventListener("submit", e => handleWorkSubmit(e))
 
 //function generatePDF() {
  //   const element = document.getElementById('#anketa);

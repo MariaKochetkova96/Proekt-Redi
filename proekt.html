@@ -39,27 +39,27 @@
                     Stress resistance, quick familiarization, creativity, have organizational skills.</p>
                     <div class="education"> 
                         <h3 class="section-heading">Education:</h3>
-                        <ul id="cv-education-list">
-                        <div class="date" id="cv-period">2011 - 2015</div>
-                        <div class="info" id="cv-education-info">  
+                        <ul id="cv-education-list"></ul>
+                        <div class="date" id="cv-period-placeholder">2011 - 2015</div>
+                        <div class="info" id="cv-education-info-placeholder">  
                             <p> Brown University. Bachelor of Aris in Finance</p>
-                        </ul>
                         </div>
                     </div>    
                     <div class="experience"> 
                         <h3 class="section-heading">Work Experience:</h3>
-                        <div class="date"> 03.2018 - 11.2022</div>
+                        <ul id="cv-work-list"></ul>
+                        <div class="date" id="cv-work-period-placeholder"> 03.2018 - 11.2022</div>
                          <div class="info"> 
-                            <p class="titel" id="titel">"A&G" Finance Manager</p> 
-                            <p id=""> Examined ab hoc initiatives, financial analyses, 
+                            <p class="titel" id="cv-work-titel-placeholder">"A&G" Finance Manager</p> 
+                            <p id="cv-work-info-placeholder"> Examined ab hoc initiatives, financial analyses, 
                             and presentations for top management and the Board of Directors.
                             Advice to company management.Planning of personnel deployment.</p>
                         </div>
                     </div>
-                        <div class="date">10.2015 - 02.2018</div>
-                        <div class="info">
-                            <p class="titel" id="place-2">"PoSayDon" Assistant Finance Manager</p>
-                            <p>Responsible for managing the day to day financial reporting and accounting processes.
+                        <div class="date"id="cv-work-period-placeholder">10.2015 - 02.2018</div>
+                        <div class="info"id="cv-work-info-placeholder">
+                            <p class="titel" id="cv-work-titel-placeholder">"PoSayDon" Assistant Finance Manager</p>
+                            <p id="cv-work-info-placeholder">Responsible for managing the day to day financial reporting and accounting processes.
                             Optimize financial plans and business processes. Controlling processes in accounting.</p> 
                     </div>
                  </div>
@@ -124,53 +124,39 @@
                 </fieldset>
             </form>
             <form id="education-form">
-                <fieldset>
+                <fieldset>Enter educational institution
                     <div class="group">
-                        <label for="form-period">inpup period: </label>
+                        <label for="form-period">input period: </label>
                         <input type="text" id="form-period">
                     </div>
                     <div>  
-                        <label for="form-education">inpup educational institution:</label>
+                        <label for="form-education">input educational institution:</label>
                         <textarea name="text" id="form-education"></textarea>
                         <input type="submit">
+                    </div>  
+                </fieldset>
+            </form>
+            <form id="work-form">
+                <fieldset>Enter work experience
+                    <div class="group">
+                        <label for="form-period-work">input period: </label>
+                        <input type="text" id="form-period-work">
                     </div>
+                    <div>  
+                        <label for="form-work-titel">input company name end position:</label>
+                        <textarea name="text" id="form-work-titel"></textarea>
+                    </div> 
+                    <div>  
+                        <label for="form-work-info">input description of your duties:</label>
+                        <textarea name="text" id="form-work-info"></textarea>
+                    </div> 
+                    <input type="submit">
                 </fieldset>
             </form>
             <form action="#" method="post" enctype="multipart/form-data" id="anketa"> 
-                
-                
-               
-                <p>Your education:</p><br>
-                <div class="group">
-                    <label for="" required>Enter time period:</label>
-                    <input type="text" class="date"> (give date in format “MM.YYYY”)
-                </div>
-                <div class="group">
-                    <label for="" required>Enter educational institution:</label>
-                    <textarea name="text" class="education"></textarea> 
-                </div>
-                <p>Your jobs:</p><br>
-                <div class="group">
-                    <label for="" required>Enter time period:</label>
-                    <input type="text" class="date"> (give date in format “MM.YYYY”)
-                </div>
-                <p id="position">Enter company name end position</p>
-                <div class="group">
-                    <label for="" required>a description of your duties:</label>
-                    <textarea name="text" class="duties"></textarea> 
-                </div>
-                <div class="group">
-                    <label for="" required>Enter time period:</label>
-                    <input type="text" class="date"> (date?)
-                </div>
-                <p id="position">Enter company name end position</p>
-                <div class="group">
-                    <label for="" required>a description of your duties:</label>
-                    <textarea name="text" class="duties"></textarea> 
-                </div>
-                    <button onclick>Preview</button>
-                    <button onclick ="geneatePDF">Save PDF</button>
-                </form>
+                <button onclick>Preview</button>
+                <button onclick ="geneatePDF">Save PDF</button>
+            </form>
         </div>
 
         <script src="proekt.js"> </script>
