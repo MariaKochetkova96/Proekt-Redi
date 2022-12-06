@@ -148,14 +148,16 @@ function handlePortrait(e) {
   updateCvPortrait(portrait)
  } 
     
-var portrait = document.querySelector("#form-portrait")
 
-portrait.addEventListener("submit", e => handlePortrait(e))
+portrait.addEventListener("change", function(e) {
+  let selectedPortrait = portrait.files[0];
+  
+}
+)
 
 window.jsPDF = window.jsPDF.jsPDF;
 
 function generatePDF() {
   var proekt = new jsPDF()
   proekt.save("proekt.pdf")
-} 
-
+}

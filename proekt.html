@@ -5,7 +5,12 @@
         <title>Anketa CV</title>
         <link rel="stylesheet" href="proekt.css">
     </head>
-    <p class="headline">You don't know where to start your CV? We will help you.</p>
+    <p class="headline">
+    Are you looking for new job?
+    You would rather stay focused on your future interview?</br>
+    Make your CV easy with just a couple of clicks in the following form.</br>
+    You don't know where to start your CV? We will help you.
+    </p>
     <body class="body">
         <div class="cv">
             <div class="column-left"> 
@@ -66,14 +71,17 @@
             </div>  
         </div>
     <p class="headline">Just fill in the fields below.</p>      
-        <div>
+        <div id="whole-form">
             <h1>User CV</h1>
             <form id="details-form"  method="post" enctype="multipart/form-data">
                 <fieldset>       
                     <div class="group">
-                        <label for="form-portrait" required>Your photo-portrait:</label>
+                        <label for="form-portrait" required>Your photo-portrait(PNG, JPG, JPEG)</label>
                         <input type="file" id="form-portrait" name="your portrait"
-                               accept="image/png, image/jpeg">
+                               accept="image/png, image/jpeg" multiple/>
+                        <div class="preview">
+                            <p>No files currently selected for upload</p>
+                        </div>       
                         <button>Submit</button>          
                     </div>           
                     <div class="group">
@@ -156,7 +164,7 @@
                     <input type="submit">
                 </fieldset>
             </form>
-            <form action="#" method="post" enctype="multipart/form-data" id="anketa"> 
+            
                 <button onclick>Preview</button>
                 <button onclick ="geneatePDF">Save PDF</button>
             </form>
