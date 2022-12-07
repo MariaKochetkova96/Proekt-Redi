@@ -14,7 +14,7 @@
     <body class="body">
         <div class="cv">
             <div class="column-left"> 
-                <img class="portrait" id="cv-portrait" src="cv_foto.jpg" alt="profile_photo">
+                <div class="portrait-image" id="portrait-image"></div> 
                 <div class="content">
                     <h3 class="section-heading">Kontakt</h3>
                     <ul>
@@ -73,17 +73,15 @@
     <p class="headline">Just fill in the fields below.</p>      
         <div id="whole-form">
             <h1>User CV</h1>
+            <form id="foto-form">
+                <fieldset>
+                    <label for="form-portrait" required>Your photo-portrait(PNG, JPG, JPEG)</label>
+                    <input type="file" id="form-portrait" name="your portrait"
+                       accept="image/png, image/jpeg" multiple/>
+                </fieldset>          
+            </form>
             <form id="details-form"  method="post" enctype="multipart/form-data">
                 <fieldset>       
-                    <div class="group">
-                        <label for="form-portrait" required>Your photo-portrait(PNG, JPG, JPEG)</label>
-                        <input type="file" id="form-portrait" name="your portrait"
-                               accept="image/png, image/jpeg" multiple/>
-                        <div class="preview">
-                            <p>No files currently selected for upload</p>
-                        </div>       
-                        <button>Submit</button>          
-                    </div>           
                     <div class="group">
                         <label for="form-email" required>E-mail:</label>
                         <input type="email" id="form-email">
@@ -164,10 +162,7 @@
                     <input type="submit">
                 </fieldset>
             </form>
-            
-                <button onclick>Preview</button>
                 <button onclick ="geneatePDF">Save PDF</button>
-            </form>
         </div>
 
         <script src="proekt.js"> </script>

@@ -135,32 +135,23 @@ function handleWorkSubmit(e) {
 var workForm = document.querySelector("#work-form")
 
 workForm.addEventListener("submit", e => handleWorkSubmit(e))
+
  
-
-function updateCvPortrait(portraitImage) {
-  var cvPortrait = document.querySelector("#cv-portrait-placeholder").remove()
-  cvPortrait.innerHTML = `${portraitImage}`
-}
-
-//function handlePortrait(e) {
-  //e.preventDefault()
-  //var portrait = document.querySelector("#form-portrait").value
-  //updateCvPortrait(portrait)
- //} 
-    
-const portrait = document.querySelector("#form-portrait")
-portrait.addEventListener("change", function(e) {
-  const reader =  new FileReader();
+ const portrait = document.querySelector("#form-portrait");
+ portrait.addEventListener("change", function() {
+  const reader = new FileReader();
   reader.addEventListener("load", () => {
     const uploaded_image = reader.result;
-    document.querySelector("#portrait-image")
-  })
-updateCvPortrait(portraitImage) 
-})
+    document.querySelector("#portrait-image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
 
-window.jsPDF = window.jsPDF.jsPDF;
 
-function generatePDF() {
-  var proekt = new jsPDF()
-  proekt.save("proekt.pdf")
-}
+//window.jsPDF = window.jsPDF.jsPDF;
+
+//functio
+//updateCvPortrait(portrn generatePDF() {
+  //var proekt = new jsPDF()
+  //proekt.save("proekt.pdf")
+//}
