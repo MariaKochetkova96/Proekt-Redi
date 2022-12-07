@@ -137,23 +137,26 @@ var workForm = document.querySelector("#work-form")
 workForm.addEventListener("submit", e => handleWorkSubmit(e))
  
 
-function updateCvPortrait(portrait) {
+function updateCvPortrait(portraitImage) {
   var cvPortrait = document.querySelector("#cv-portrait-placeholder").remove()
-  cvPortrait.innerHTML = `${portrait}`
+  cvPortrait.innerHTML = `${portraitImage}`
 }
 
-function handlePortrait(e) {
-  e.preventDefault()
-  var portrait = document.querySelector("#form-portrait").value
-  updateCvPortrait(portrait)
- } 
+//function handlePortrait(e) {
+  //e.preventDefault()
+  //var portrait = document.querySelector("#form-portrait").value
+  //updateCvPortrait(portrait)
+ //} 
     
-
+const portrait = document.querySelector("#form-portrait")
 portrait.addEventListener("change", function(e) {
-  let selectedPortrait = portrait.files[0];
-  
-}
-)
+  const reader =  new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#portrait-image")
+  })
+updateCvPortrait(portraitImage) 
+})
 
 window.jsPDF = window.jsPDF.jsPDF;
 
