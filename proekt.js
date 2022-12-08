@@ -1,37 +1,3 @@
-const PDFStart = nameRoute => {
-}
-const startPdf = () => {
-PDFStart('../media/r.pdf')
-}
-window.addEventListener('load', startPdf);
-
-let loadingTask = pdfjsLib.getDocument(nameRoute),
-pdfDoc = null,
-canvas = document.querySelector('#cv'),
-ctx = canvas.getContext('2d'),
-scale = 1.5,
-numPage = 1;
-
-loadingTask.promise.then(pdfDoc_ => {
-  pdfDoc = pdfDoc_;
-  document.querySelector('#cv').innerHTML = pdfDoc.numPages;
-  GeneratePDF(numPage)
-  });
-
-  const GeneratePDF = numPage => {
-    pdfDoc.getPage(numPage).then(page => {
-    let viewport = page.getViewport({ scale: scale });
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-    let renderContext = {
-    canvasContext : ctx,
-    viewport:  viewport
-    }
-    page.render(renderContext);
-    })
-    document.querySelector('#cv').innerHTML = numPage;
-    }
-
 function updateCvDetails(email, telefon, address, name, profession) {
   var cvEmail = document.querySelector("#cv-email")
   var cvTelefon = document.querySelector("#cv-tel-number")
