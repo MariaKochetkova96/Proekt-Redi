@@ -4,15 +4,16 @@
         <meta charset="UF-8">
         <title>Anketa CV</title>
         <link rel="stylesheet" href="proekt.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
     </head>
-    <p class="headline">
-    Are you looking for new job?
-    You would rather stay focused on your future interview?</br>
-    Make your CV easy with just a couple of clicks in the following form.</br>
-    You don't know where to start your CV? We will help you.
-    </p>
     <body class="body">
-        <div class="cv">
+        <p class="headline">
+            Are you looking for new job?
+            You would rather stay focused on your future interview?</br>
+            Make your CV easy with just a couple of clicks in the following form.</br>
+            You don't know where to start your CV? We will help you.
+            </p>
+        <div class="cv" id="cv">
             <div class="column-left"> 
                 <div class="portrait-image" id="portrait-image"></div> 
                 <div class="content">
@@ -69,6 +70,9 @@
                     </div>
                  </div>
             </div>  
+        </div>
+        <div>
+            <button onclick ="geneatePDF">Save PDF</button>
         </div>
     <p class="headline">Just fill in the fields below.</p>      
         <div id="whole-form">
@@ -162,10 +166,9 @@
                     <input type="submit">
                 </fieldset>
             </form>
-                <button onclick ="geneatePDF">Save PDF</button>
         </div>
 
-        <script src="proekt.js"> </script>
+        <script src="proekt.js"></script>
     </body>
     </html>
 

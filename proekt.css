@@ -75,4 +75,5 @@ textarea {
     height: 200px;
     background-image: url("cv_foto.jpg");
     background-size: cover;
+    background-position: top;
 }
